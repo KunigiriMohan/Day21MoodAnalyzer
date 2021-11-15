@@ -4,8 +4,7 @@ public class MoodAnalyser {
     String message;
 
     MoodAnalyser(String message){
-        this.message=message;
-
+        this.message=message;                               //Creating constructer of the class
     }
         public String analyseMood () {
             MoodAnalyser obj = new MoodAnalyser(message);
