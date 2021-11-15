@@ -1,9 +1,16 @@
 import java.util.Locale;
 
 public class MoodAnalyser {
-    public String analyseMood(String message){
-        String msg=message.toLowerCase(Locale.ROOT);        //Converting input from test class to Lower case
-        if(msg.contains(("sad")))                   //Checking input contain sad or not
+    String message;
+    MoodAnalyser(String message){
+        this.message=message;                               //Creating constructer of the class
+    }
+
+    public String analyseMood(){
+        MoodAnalyser obj = new MoodAnalyser(message);                       
+        boolean store = obj.message.toLowerCase(Locale.ROOT).contains("sad");       //Checking Word present in string by converting into lowerCase
+
+        if(store == true)                   //Checking input contain sad or not
         {
             return "SAD";
         }
